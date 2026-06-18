@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17140f">
+    <title>歪歪隋唐英雄传 - 网页复刻原型</title>
+    <link rel="stylesheet" href="./styles.css?v=20260618-mobile-dialog-touch-c">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-stage" aria-label="游戏画面">
+        <div class="status-strip" id="statusStrip"></div>
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="128" height="128" aria-label="歪歪隋唐英雄传游戏画布"></canvas>
+          <div class="dice-overlay" id="diceOverlay" hidden></div>
+          <div class="city-overlay" id="cityOverlay" hidden></div>
+          <div class="text-overlay" id="textOverlay" hidden></div>
+          <div class="message-overlay" id="messageOverlay" hidden></div>
+        </div>
+      </section>
+
+      <aside class="command-panel" aria-label="操作面板">
+        <button data-key="ArrowUp" class="command-key command-up" type="button" aria-label="上键：情报或上选">
+          <span class="command-symbol">↑</span><span class="command-hint">情报 / 上选</span>
+        </button>
+        <button data-key="ArrowLeft" class="command-key command-left" type="button" aria-label="左键：选择一个骰子或确认">
+          <span class="command-symbol">←</span><span class="command-hint">1骰 / 确认</span>
+        </button>
+        <button data-key="ArrowDown" class="command-key command-down primary" type="button" aria-label="下键：掷骰或下选">
+          <span class="command-symbol">↓</span><span class="command-hint">掷骰 / 下选</span>
+        </button>
+        <button data-key="ArrowRight" class="command-key command-right" type="button" aria-label="右键：选择两个骰子或返回">
+          <span class="command-symbol">→</span><span class="command-hint">2骰 / 返回</span>
+        </button>
+        <button data-key="Enter" class="command-key command-enter" type="button" aria-label="Enter键：确认">
+          <span class="command-symbol command-symbol-text">Enter</span><span class="command-hint">确认</span>
+        </button>
+        <button data-key="Escape" class="command-key command-escape" type="button" aria-label="ESC键：返回">
+          <span class="command-symbol command-symbol-text">ESC</span><span class="command-hint">返回</span>
+        </button>
+      </aside>
+    </main>
+
+    <script src="./src/original-data.js?v=20260617-input-scheme-a"></script>
+    <script src="./src/data.js?v=20260617-input-scheme-a"></script>
+    <script src="./src/game.js?v=20260618-mobile-dialog-touch"></script>
+  </body>
+</html>
